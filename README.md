@@ -1,6 +1,7 @@
 # Brain-Inspired Decoupled LLM: Minimal MVP | Solve Bloat, Black-Box, Amnesia & Hallucination
 # 类脑解耦大模型 最简MVP | 从根源解决LLM臃肿、黑箱、失忆、幻觉四大核心问题
 
+## 🧠 Architecture Flowchart
 ```mermaid 
 graph TD 
 A[Input Text] --> B[Syntax Parser<br/>spaCy]
