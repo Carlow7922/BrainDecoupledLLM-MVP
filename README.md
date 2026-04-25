@@ -1,16 +1,12 @@
 # Brain-Inspired Decoupled LLM: Minimal MVP | Solve Bloat, Black-Box, Amnesia & Hallucination
 # 类脑解耦大模型 最简MVP | 从根源解决LLM臃肿、黑箱、失忆、幻觉四大核心问题
 
----
-
-## 🧠 架构流程图
-```mermaid
 graph TD
-    A[输入文本] --> B[spaCy 句法解析]
-    B --> C[实体-属性绑定]
-    C --> D[JSON 外置记忆存储]
-    D --> E[LLM 中央调度器]
-    E --> F[无幻觉精准输出]
+    A[Input Text] --> B[Syntax Parser<br/>spaCy]
+    B --> C[Entity-Attribute Binding<br/>模块化子模块]
+    C --> D[External Memory<br/>JSON]
+    D --> E[Central Scheduler<br/>Lightweight LLM]
+    E --> F[Output<br/>No Hallucination]
 
 ## 🌟 Project Overview
 A **minimal, reproducible prototype** for a brain-inspired modular decoupled LLM architecture. Rejecting Transformer's "parameter brute-force stacking" paradigm, this project verifies a new AI design philosophy:  
