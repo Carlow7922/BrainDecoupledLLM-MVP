@@ -1,6 +1,24 @@
 # Brain-Inspired Decoupled LLM: Minimal MVP | Solve Bloat, Black-Box, Amnesia & Hallucination
 # 类脑解耦大模型 最简MVP | 从根源解决LLM臃肿、黑箱、失忆、幻觉四大核心问题
 
+## Design Philosophy: This Implementation Is a "Concept Sketch"
+
+This project demonstrates an **architectural idea**: decomposing natural language understanding into two paths — **cognition** (learning / memorizing) and **question answering** (retrieving / reasoning). Each path is handled by dedicated, independent modules, and finally a lightweight LLM serves only as the **language interface** that verbalizes facts stored in a temporary memory space.
+
+To quickly validate this data flow in a Minimum Viable Product (MVP), we deliberately used simplified technical placeholders:
+
+- `spaCy` rule matching **temporarily stands for** a future intent classifier or information extraction model.
+- A `JSON` file **temporarily stands for** the actual persistent memory store (e.g., a knowledge graph, vector database, or relational DB).
+- Hard‑coded branching logic **temporarily stands for** dynamically dispatched expert sub‑modules.
+
+**These placeholders are not the upper bound of the architecture.** They are merely a “concept sketch” for easy demonstration. Our true goal is that each abstraction layer can be replaced by properly trained specialist models (e.g., a fine‑tuned BERT for entity extraction, a graph database for knowledge storage, a symbolic solver for arithmetic), while the core principles remain unchanged:
+
+- External memory is the **single source of truth**.
+- The LLM **only repeats** what resides in the temporary memory space — no factual generation, no hallucination.
+
+So please do not judge the architecture by how “primitive” the current code looks. Instead, focus on the possibility this architecture points to: **a decoupled, specialized, and fully auditable AI system where hallucinations are eliminated by design.**
+
+
 ## 🧠 Architecture Flowchart
 ```mermaid 
 graph TD 
